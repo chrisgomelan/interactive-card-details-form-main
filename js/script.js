@@ -13,10 +13,10 @@ const error = document.getElementById('error');
 const error1 = document.querySelector('.error1');
 const error2 = document.querySelector('.error2');
 const error3 = document.querySelector('.error3');
-
+const tyform = document.querySelector('.ty-form');
 const y1 = document.querySelector('.y1');
 const m1 = document.querySelector('.m1');
-
+const cont = document.querySelector('.continue');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 })
@@ -74,5 +74,12 @@ function myFunc(){
      cvc.innerHTML = cvc1.value;    
      y1.innerHTML = year.value;
      m1.innerHTML = month.value;
+    tyform.classList.add('active');
+    tyform.style.display = "flex";
 }
 submit.addEventListener('click', myFunc);
+
+function proceed(){
+    location.reload();
+}
+cont.addEventListener('click', proceed);
