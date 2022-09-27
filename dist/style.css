@@ -1,0 +1,351 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+main .cards {
+  position: relative;
+  background: url("/images/bg-main-mobile.png") no-repeat;
+  background-position: top;
+  background-size: 100% 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  letter-spacing: .1rem;
+}
+
+main .cards .main-card {
+  position: relative;
+  top: -3rem;
+}
+
+main .cards .front, main .cards .back {
+  border-radius: .3rem;
+  max-width: 100%;
+  width: 300px;
+  position: relative;
+  top: 5rem;
+  color: white;
+}
+
+main .cards .front {
+  position: relative;
+  z-index: 1;
+  background: url("/images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 3rem .5rem 3rem 1rem;
+  top: .4rem;
+  right: 1rem;
+}
+
+main .cards .front img {
+  position: relative;
+  bottom: 1.6rem;
+  width: 3rem;
+}
+
+main .cards .front h3 {
+  font-weight: 400;
+}
+
+main .cards .front .name-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .cards .front .name-date h5, main .cards .front .name-date h6 {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: .6rem;
+}
+
+main .cards .back {
+  position: relative;
+  z-index: 0;
+  bottom: 7px;
+  background: url("/images/bg-card-back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 5rem 5rem;
+}
+
+main .cards .back h6 {
+  position: relative;
+  left: 10rem;
+  width: 0;
+}
+
+main .inputs {
+  width: 100%;
+}
+
+main .inputs input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #dedddf;
+  outline: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+main .inputs input:focus {
+  border: 1px solid #21092f;
+}
+
+main .inputs ::-webkit-input-placeholder {
+  color: #b7b1b9;
+}
+
+main .inputs :-ms-input-placeholder {
+  color: #b7b1b9;
+}
+
+main .inputs ::-ms-input-placeholder {
+  color: #b7b1b9;
+}
+
+main .inputs ::placeholder {
+  color: #b7b1b9;
+}
+
+main .inputs label {
+  text-transform: uppercase;
+  font-size: .7rem;
+  letter-spacing: 1px;
+  margin: .5rem 0;
+  color: #21092f;
+  font-weight: 700;
+}
+
+main .inputs form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 1.5rem;
+}
+
+main .inputs label.exp {
+  word-spacing: 1.5rem;
+}
+
+main .inputs .below {
+  margin: .6rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .inputs .below label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .inputs .below input {
+  width: 4rem;
+  padding: 0.5rem;
+  margin: .4rem 0;
+}
+
+main .inputs .below #cvc1 {
+  width: 8rem;
+}
+
+main .inputs button {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  background: #21092f;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+main .inputs button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+main .inputs .ty-form {
+  position: absolute;
+  left: 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  height: 50%;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+main .inputs .ty-form button {
+  width: 90%;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+main .inputs .ty-form button:hover {
+  opacity: 0.9;
+}
+
+input#cn.active {
+  border: 1px solid #ff5252;
+}
+
+#error.active:after {
+  content: "Wrong format, numbers only";
+  color: #ff5252;
+  font-size: .8rem;
+}
+
+.error1.invalid::after {
+  content: "Can't be blank";
+  color: #ff5252;
+  font-size: .4rem;
+}
+
+.error2.invalid::after {
+  content: "Can't be blank";
+  color: #ff5252;
+  font-size: .4rem;
+}
+
+.error3.invalid::after {
+  content: "Can't be blank";
+  color: #ff5252;
+  font-size: .4rem;
+}
+
+input.month.active, input.year.active, input.cvc1.active {
+  border: 1px solid #ff5252;
+}
+
+.date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.date span {
+  font-size: .6em;
+}
+
+.date-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 1000px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100vh;
+  }
+  main .cards {
+    background-position: left;
+    background-size: 70% 100%;
+    height: 100%;
+  }
+  main .cards .main-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 16%;
+  }
+  main .cards .main-card .front {
+    position: relative;
+    left: 1rem;
+  }
+  main .cards .main-card .back {
+    position: relative;
+    top: 2.5rem;
+    left: 5rem;
+  }
+  main .inputs .below input {
+    width: 6rem;
+  }
+  main .inputs .below #cvc1 {
+    width: 15rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

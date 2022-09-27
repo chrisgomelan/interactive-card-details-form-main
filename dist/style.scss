@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+
+.cards{
+    position: relative;
+    background: url('/images/bg-main-mobile.png') no-repeat;
+    background-position: top;
+    background-size: 100% 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    letter-spacing: .1rem;
+
+    .main-card {
+        position: relative;
+        top: -3rem;
+    }
+.front,.back{
+    border-radius: .3rem; 
+    max-width: 100%;
+    width: 300px;
+    position: relative;
+    top: 5rem;    
+    color:  hsl(0, 0%, 100%);
+}
+.front{
+    position: relative;
+    z-index: 1;
+    background: url('/images/bg-card-front.png'); 
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+    padding: 3rem .5rem 3rem 1rem; 
+    top: .4rem;
+    right: 1rem;
+
+    img{
+        position: relative;
+        bottom: 1.6rem;
+        width: 3rem;
+    }
+    h3{
+        font-weight: 400;
+    }
+    .name-date{
+        display: flex;
+        justify-content: space-between;
+
+        h5,h6{
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: .6rem;
+    }}
+}
+.back{
+    position: relative;
+    z-index: 0;
+    bottom: 7px;
+    background: url('/images/bg-card-back.png'); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+    padding: 5rem 5rem; 
+    
+    h6{
+        position: relative;
+        left: 10rem;
+        width: 0;
+    }
+}
+ }
+
+.inputs{
+    width: 100%;
+    input{
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-radius: 10px;
+        border: 1px solid hsl(270, 3%, 87%);
+        outline: none;
+        transition: 0.3s ease-in-out;
+           
+    }
+    input:focus{
+                
+        border: 1px solid hsl(278, 68%, 11%);
+    }
+    ::placeholder{
+        color: hsl(283, 5%, 71%);
+    }
+    label{
+        text-transform: uppercase;
+        font-size: .7rem;
+        letter-spacing: 1px;
+        margin: .5rem 0;
+        color: hsl(278, 68%, 11%);
+        font-weight: 700;
+    }
+    form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+}
+
+label.exp {
+    word-spacing: 1.5rem;
+}
+.below{
+    margin: .6rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    label{
+        display: flex;
+        flex-direction: column;
+        
+    }
+     input {
+        width: 4rem;
+        padding: 0.5rem;
+        margin: .4rem 0;
+      
+    }
+    
+  #cvc1{
+            width: 8rem;
+        }
+
+   
+}
+button{
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    color: white;
+    background: hsl(278, 68%, 11%);
+    transition: 0.3s ease-in-out;
+}   
+button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+} 
+.ty-form{
+
+    position: absolute;
+    left: 0;
+    display: none;
+    // display: flex; //display when active
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    height: 50%;
+    width: 100%;
+    gap: 1.5rem;
+    
+    button{
+        width: 90%;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+    button:hover{
+        opacity: 0.9;
+    }
+}
+}
+
+}
+input#cn.active {
+    border: 1px solid #ff5252;
+}
+#error.active:after{
+    content: "Wrong format, numbers only";
+    color: hsl(0, 100%, 66%);
+    font-size: .8rem;
+      
+}
+.error1.invalid::after{
+    content: "Can't be blank";
+    color: hsl(0, 100%, 66%);
+    font-size: .4rem;
+}
+.error2.invalid::after{
+    content: "Can't be blank";
+    color: hsl(0, 100%, 66%);
+    font-size: .4rem;
+}
+.error3.invalid::after{
+    content: "Can't be blank";
+    color: hsl(0, 100%, 66%);
+    font-size: .4rem;
+}
+input.month.active, input.year.active, input.cvc1.active{
+    border: 1px solid #ff5252;
+}
+.date{
+    display: flex;
+    align-items: center;
+
+    span{
+        font-size: .6em;
+    }
+}
+.date-flex{
+    display: flex;
+}
+@media (min-width:1000px){
+  main{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+    .cards{
+        background-position: left;
+        background-size: 70% 100%;
+        height: 100%;
+
+        .main-card{
+            display: flex;
+            flex-direction: column-reverse;
+            position: relative;
+            justify-content: center;
+            top: 16%;
+            
+            .front{
+                position: relative;
+                left: 1rem;
+            }
+            .back{
+                position: relative;
+                top: 2.5rem;
+                left: 5rem;
+            }
+            
+}
+            
+        
+    }
+    .inputs .below input{
+        width: 6rem;
+    }
+    .inputs .below {
+       
+        #cvc1 {
+        width: 15rem;
+    }}
+    
+  } 
+  
+}
